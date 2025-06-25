@@ -43,3 +43,5 @@ Tap on the search icon on the top right in the homepage. A search page will be o
 Clone this git repo into your local repo. Open the project in your desired IDE (Android Studio is recommended). Run "pub upgrade" and "pub get" in the terminal to install the dependencies. Choose a device or emulator you want to install the application in. Open the terminal and type in the command "flutter build apk --release --no-tree-shake-icons" and press Enter.
 
 ## Video Demo
+
+Save point 1
