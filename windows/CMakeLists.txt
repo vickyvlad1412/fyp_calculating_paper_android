@@ -10,6 +10,10 @@ set(BINARY_NAME "calculating_paper")
 # versions of CMake.
 cmake_policy(VERSION 3.14...3.25)
 
+set(JAVA_HOME "C:/Program Files/Java/jdk-24")
+list(APPEND CMAKE_PREFIX_PATH "${JAVA_HOME}")
+list(APPEND CMAKE_PREFIX_PATH "${JAVA_HOME}/bin/server")
+
 # Define build configuration option.
 get_property(IS_MULTICONFIG GLOBAL PROPERTY GENERATOR_IS_MULTI_CONFIG)
 if(IS_MULTICONFIG)
