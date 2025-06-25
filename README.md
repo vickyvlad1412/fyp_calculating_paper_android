@@ -40,6 +40,6 @@ Open a note to plot graph in it. Press the button with the graph icon on it on t
 Tap on the search icon on the top right in the homepage. A seach page will be opened. Type in phrases or equations you want to search, and choose the note you were searching for from the search results.
 
 ## How To Install
-Clone this git repo into your local repo. Open the project in your desired IDE (Android Studio is recommended). Choose a device or emulator you want to install the application in. Open the terminal and type in the command "flutter build apk --release --no-tree-shake-icons" and press Enter.
+Clone this git repo into your local repo. Open the project in your desired IDE (Android Studio is recommended). Run "pub upgrade" and "pub get" in the terminal to install the dependencies. Choose a device or emulator you want to install the application in. Open the terminal and type in the command "flutter build apk --release --no-tree-shake-icons" and press Enter.
 
 ## Video Demo
