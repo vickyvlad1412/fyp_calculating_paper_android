@@ -2,13 +2,6 @@
 #include <flutter/flutter_view_controller.h>
 #include <windows.h>
 
-#include "expression_evaluator.h"
-
-#include <memory>
-#include <sstream>
-#include <string>
-#include <map>
-
 #include "flutter_window.h"
 #include "utils.h"
 
@@ -39,42 +32,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
   }
   window.SetQuitOnClose(true);
 
-  auto registrar = window.GetRegistrar();
-  auto channel = std::make_unique<flutter::MethodChannel<flutter::EncodableValue>>(
-     registrar->messenger(),
-     "calculating_paper/calculation",
-     &flutter::StandardMethodCodec::GetInstance());
-
-  channel->SetMethodCallHandler(
-    [](auto& call, auto result){
-      if (call.method_name()=="evaluateExpression") {
-        auto args = std::get_if<flutter::EncodableMap>(call.arguments());
-        if (!args) {
-          result->Error("INVALID_ARGUMENTS","need map");
-          return;
-        }
-        std::string expr;
-        int prec= Provider::of<…>(); // you get precision from args map
-        auto itE = args->find(flutter::EncodableValue("expression"));
-        if(itE!=args->end())
-          expr= std::get<std::string>(itE->second);
-        auto itP = args->find(flutter::EncodableValue("precision"));
-        if(itP!=args->end())
-          prec= std::get<int>(itP->second);
-
-        auto er = ExpressionEvaluator::evaluate(expr,prec);
-        if (er.isError) {
-          result->Error("EVALUATION_ERROR", er.errMsg);
-        } else {
-          result->Success(flutter::EncodableValue(er.value.convert_to<std::string>()));
-        }
-      } else {
-        result->NotImplemented();
-      }
-  });
-
-
-::MSG msg;
+  ::MSG msg;
   while (::GetMessage(&msg, nullptr, 0, 0)) {
     ::TranslateMessage(&msg);
     ::DispatchMessage(&msg);

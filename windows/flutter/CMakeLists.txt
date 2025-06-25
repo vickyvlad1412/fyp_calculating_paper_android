@@ -83,16 +83,6 @@ target_include_directories(flutter_wrapper_app PUBLIC
 )
 add_dependencies(flutter_wrapper_app flutter_assemble)
 
-# after the existing find_package calls in this file:
-find_package(Boost REQUIRED COMPONENTS math)
-
-# then later, in the same file where you do `target_link_libraries`:
-target_link_libraries(${BINARY_NAME}
-        Boost::boost
-        Boost::math_c99    # or Boost::math_c99f, depending on your version
-)
-
-
 # === Flutter tool backend ===
 # _phony_ is a non-existent file to force this command to run every time,
 # since currently there's no way to get a full input/output list from the

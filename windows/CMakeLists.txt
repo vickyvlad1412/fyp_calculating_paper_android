@@ -2,13 +2,6 @@
 cmake_minimum_required(VERSION 3.14)
 project(calculating_paper LANGUAGES CXX)
 
-# silence that CMP0144 warning and opt in to the new behavior:
-cmake_policy(SET CMP0144 NEW)
-
-# point CMake to your Boost install:
-set(Boost_ROOT "C:/local/boost_1_82_0")        # <- adjust to your actual Boost folder
-set(Boost_NO_SYSTEM_PATHS ON)                  # optional, makes CMake only look in Boost_ROOT
-
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
 set(BINARY_NAME "calculating_paper")
@@ -51,15 +44,6 @@ function(APPLY_STANDARD_SETTINGS TARGET)
   target_compile_definitions(${TARGET} PRIVATE "_HAS_EXCEPTIONS=0")
   target_compile_definitions(${TARGET} PRIVATE "$<$<CONFIG:Debug>:_DEBUG>")
 endfunction()
-
-# Tell CMake to look for Boost on your system:
-set(BOOST_ROOT "C:/local/boost_1_82_0")  # ← adjust to wherever you installed Boost
-find_package(Boost 1.75 REQUIRED COMPONENTS math_c99)  # we need Boost.Math
-
-if(NOT Boost_FOUND)
-  message(FATAL_ERROR "Boost not found; please install and set BOOST_ROOT")
-endif()
-
 
 # Flutter library and tool build rules.
 set(FLUTTER_MANAGED_DIR "${CMAKE_CURRENT_SOURCE_DIR}/flutter")
