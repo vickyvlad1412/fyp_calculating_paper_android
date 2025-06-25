@@ -34,10 +34,10 @@ When doing calculation in a note, tap on the tune icon on the top right of the p
 Open a note to do calculations in it. Use the toggle keyboard button on the bottom center of the page to toggle between the custom keyboard and default system keyboard. Type and assign a value to a variable such as "x = 5" and press the "Evaluate" button to save the variable. Go to the next line and perform operations (e.g. x+3) or apply functions (e.g. sin(x)) to the variable and press the "Evaluate" button. Up to 3 variables can be saved and used in a single note.
 
 ### Plotting Graphs
-Open a note to plot graph in it. Press the button with the graph icon on it on the bottom right of the page. A graph block will be generated. Enter an equation in the text field (e.g. y = 3*x) and press the Plot button to plot the graph. Equations need to be in the form of a y function wiht respect to x in order to plot the graph. (e.g. y = 3*cos(x)+5)
+Open a note to plot graph in it. Press the button with the graph icon on it on the bottom right of the page. A graph block will be generated. Enter an equation in the text field (e.g. y = 3*x) and press the Plot button to plot the graph. Equations need to be in the form of a y function with respect to x in order to plot the graph. (e.g. y = 3*cos(x)+5)
 
 ### Searching For A Note
-Tap on the search icon on the top right in the homepage. A seach page will be opened. Type in phrases or equations you want to search, and choose the note you were searching for from the search results.
+Tap on the search icon on the top right in the homepage. A search page will be opened. Type in phrases or equations you want to search, and choose the note you were searching for from the search results.
 
 ## How To Install
 Clone this git repo into your local repo. Open the project in your desired IDE (Android Studio is recommended). Run "pub upgrade" and "pub get" in the terminal to install the dependencies. Choose a device or emulator you want to install the application in. Open the terminal and type in the command "flutter build apk --release --no-tree-shake-icons" and press Enter.
