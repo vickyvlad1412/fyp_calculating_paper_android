@@ -4,7 +4,7 @@
 Numora is a calculating paper app that blends a calculator with note taking features. Just like doing calculations on a paper, Numora allows users to work with calculation and take notes without changing their workspace. Numora supports infinite decimal precision and allows users to work with as many significant figures as they want to. Numora can compute calculations involving exponents, logarithmic functions, factorials and trigonometric functions. On top of that, Numora also offers users to use variables in their calculations. Other than calculations, Numora also has graphing features. In their note, users can plot graphs along their calculations to aid in their math work.
 
 ## Features & How To Use Them
-All features and how to use them will be provided in the video demo below.
+All features and how to use them are explained below.
 
 ### Creating A Note
 Press the floating action button on the bottom right to create a new note. Once a new note is created, it can be saved by pressing the save icon on the top right.
@@ -42,6 +42,3 @@ Tap on the search icon on the top right in the homepage. A search page will be o
 ## How To Install
 Clone this git repo into your local repo. Open the project in your desired IDE (Android Studio is recommended). Run "pub upgrade" and "pub get" in the terminal to install the dependencies. Choose a device or emulator you want to install the application in. Open the terminal and type in the command "flutter build apk --release --no-tree-shake-icons" and press Enter.
 
-## Video Demo
-
-Save point 1
